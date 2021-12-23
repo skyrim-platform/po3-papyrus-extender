@@ -1,0 +1,38 @@
+{
+    "name": "@skyrim-platform/po3-papyrus-extender",
+    "version": "4.2.1",
+    "description": "(Unofficial) TypeScript library for the powerofthree Papyrus Extender Skyrim modding utility",
+    "main": "",
+    "types": "index.d.ts",
+    "license": "MIT",
+    "homepage": "https://github.com/skyrim-platform/po3-papyrus-extender",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skyrim-platform/po3-papyrus-extender.git"
+    },
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "npm:publish": "npm run build && npm run prepare && npm publish && npm run cleanup",
+        "prepare": "cpy \"dist/*\" .",
+        "cleanup": "rimraf \"*.js\" \"*.ts\" dist/"
+    },
+    "devDependencies": {
+        "cpy": "^8.1.2",
+        "cpy-cli": "^3.1.1",
+        "rimraf": "^3.0.2",
+        "tsc": "^2.0.3",
+        "typescript": "^4.5.4"
+    },
+    "files": [
+        "*.js",
+        "*.ts"
+    ],
+    "keywords": [
+        "skyrim",
+        "skyrim platform"
+    ],
+    "dependencies": {
+        "@skyrim-platform/skyrim-platform": "^2.3.1"
+    }
+}
