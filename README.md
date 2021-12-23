@@ -14,5 +14,17 @@ You can find an example Skyrim Platform plugin with documentation on how to get 
 ## Example
 
 ```ts
-TODO
+import { once, Game, Debug, Spell, Actor } from '@skyrim-platform/skyrim-platform'
+import { RemoveBaseSpell } from '@skyrim-platform/po3-papyrus-extender/PO3_SKSEFunctions'
+
+// Remove the 'Flames' spell from the player!
+once('update', () => {
+    const flamesFormID = parseInt('00012FCD', 16)
+    const flames = Spell.from(Game.getForm(flamesFormID))
+    if (flames) {
+        const player = Game.getPlayer()
+        if (RemoveBaseSpell(player, flames))
+            Debug.messageBox(`Removed base spell ${flames.getName()} from the player`)
+    }
+})
 ```

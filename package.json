@@ -1,6 +1,6 @@
 {
     "name": "@skyrim-platform/po3-papyrus-extender",
-    "version": "4.2.1",
+    "version": "4.5.5",
     "description": "(Unofficial) TypeScript library for the powerofthree Papyrus Extender Skyrim modding utility",
     "main": "",
     "types": "index.d.ts",
