@@ -33,6 +33,6 @@
         "skyrim platform"
     ],
     "dependencies": {
-        "@skyrim-platform/skyrim-platform": "^2.3.1"
+        "@skyrim-platform/skyrim-platform": "^2.4.0"
     }
 }
